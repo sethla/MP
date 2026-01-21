@@ -3,8 +3,9 @@ package com.example.mymusicapp
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.common.MediaItem
+
 
 class MusicService : Service() {
 

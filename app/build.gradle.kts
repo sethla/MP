@@ -4,18 +4,19 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"  // MOET exact overeenkomen met je package
-    compileSdk = 34
+    namespace = "com.example.myapplication"
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.myapplication"
-        minSdk = 26
-        targetSdk = 34
+        minSdk = 24
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-        buildFeatures {
-            viewBinding = true
-        }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     compileOptions {
@@ -28,11 +29,23 @@ android {
     }
 }
 
-dependencies {
-    implementation("androidx.media3:media3-exoplayer:1.9.0")
-    implementation("androidx.media3:media3-exoplayer-dash:1.9.0")
-    implementation("androidx.media3:media3-ui:1.9.0")
-    implementation("androidx.media3:media3-ui-compose:1.9.0")
-    implementation(libs.material)
+repositories {
+    google()
+    mavenCentral()
+}
 
+dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.3.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.1")
+
+    // Media3 (ExoPlayer replacement)
+    implementation("androidx.media3:media3-exoplayer:1.2.2")
+    implementation("androidx.media3:media3-ui:1.2.2")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
 }
