@@ -1,4 +1,4 @@
-package com.example.mymusicapp
+package com.example.myapplication
 
 import android.view.LayoutInflater
 import android.view.View
